@@ -6,6 +6,3 @@ output "hello_world" {
   value = "hello world!"
 }
 
-output "hello_cat" {
-  value = "hello cat!"
-}
