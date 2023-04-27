@@ -1,5 +1,5 @@
 terraform {
-  required_version = "~> 1.4.0"
+  required_version = ">= 1.0.0"
 }
 
 data "terraform_remote_state" "stack1" {
