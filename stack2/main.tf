@@ -10,7 +10,7 @@ data "terraform_remote_state" "stack1" {
     organization = "msamendinger"
 
     workspaces = {
-      name = "stack1"
+      name = "stack"
     }
   }
 }
