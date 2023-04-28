@@ -11,6 +11,10 @@
 To enable `stack2` to read the output of `stack1` you have to enable
 `External state access` in spacelift on `stack1` and `Administrative` on `stack2`
 
+:grey_exclamation: Be sure to reference stack1's stack id instead of the stack's
+name as workspace name in stack2/main.tf. The id doesn't change when you rename
+the stack.
+
 ### ToDo
 
 - Add spacelift configuration as IaC
