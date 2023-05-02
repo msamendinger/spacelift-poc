@@ -22,3 +22,10 @@ resource "spacelift_stack" "stack2" {
   labels       = ["managed", "depends-on:${data.spacelift_current_stack.this.id}", "feature:add_plan_pr_comment"]
 }
 
+resource "spacelift_stack" "dev" {
+  name         = "azure-dev"
+  repository   = "spacelift-poc"
+  branch       = "main"
+  project_root = "env/dev"
+  labels       = ["managed", "depends-on:${data.spacelift_current_stack.this.id}", "feature:add_plan_pr_comment"]
+}
