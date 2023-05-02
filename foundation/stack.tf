@@ -8,7 +8,7 @@ resource "spacelift_stack" "stack1" {
   repository   = "spacelift-poc"
   branch       = "main"
   project_root = "stack1"
-  labels       = ["managed", "depends-on:${data.spacelift_current_stack.this.id}"]
+  labels       = ["managed", "depends-on:${data.spacelift_current_stack.this.id}", "feature:add_plan_pr_comment"]
 }
 
 resource "spacelift_stack" "stack2" {
@@ -19,6 +19,6 @@ resource "spacelift_stack" "stack2" {
   repository   = "spacelift-poc"
   branch       = "main"
   project_root = "stack2"
-  labels       = ["managed", "depends-on:${data.spacelift_current_stack.this.id}"]
+  labels       = ["managed", "depends-on:${data.spacelift_current_stack.this.id}", "feature:add_plan_pr_comment"]
 }
 
