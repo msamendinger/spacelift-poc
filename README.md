@@ -18,4 +18,10 @@ the stack.
 ### ToDo
 
 - Add spacelift configuration as IaC
+- Modules in subfolders of repo
+  - versioning
+- Notification policy mattermost webhook
+- Policy are tags on resource group
+- Approval policy
+- local run with spacectl
 
