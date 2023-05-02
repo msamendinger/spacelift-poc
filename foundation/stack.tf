@@ -4,7 +4,7 @@ resource "spacelift_stack" "stack1" {
   terraform_external_state_access = true
   # Source code.
   repository   = "spacelift-poc"
-  branch       = "master"
+  branch       = "main"
   project_root = "stack1"
 }
 
@@ -14,7 +14,7 @@ resource "spacelift_stack" "stack2" {
   autodeploy     = true
   # Source code.
   repository   = "spacelift-poc"
-  branch       = "master"
+  branch       = "main"
   project_root = "stack2"
 }
 
