@@ -1,5 +1,11 @@
 # spacelift POC
 
+### foundation
+
+spacelift configuration is managed as terraform files here.
+
+The stack that points to the foundation subfolder must be an administrative one.
+
 ### stack1 
 
 /stack1 is creating two outputs `hello_world` and `hello_dog`
@@ -17,7 +23,6 @@ the stack.
 
 ### ToDo
 
-- Add spacelift configuration as IaC
 - Modules in subfolders of repo
   - versioning
 - Notification policy mattermost webhook
