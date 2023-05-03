@@ -28,6 +28,7 @@ resource "spacelift_stack" "dev" {
   branch       = "main"
   project_root = "env/dev"
   labels       = ["managed", "depends-on:${data.spacelift_current_stack.this.id}", "feature:add_plan_pr_comment"]
+  runner_image = "msamendsandbox.azurecr.io/spacelift/runner-terrafrom:azure-latest"
 }
 
 resource "spacelift_environment_variable" "arm_client_id" {
