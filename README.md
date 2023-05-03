@@ -30,3 +30,6 @@ the stack.
 - Approval policy
 - local run with spacectl
 
+### Teardown external infrastructure
+
+- delete acr for runner-terraform:azure-latest
