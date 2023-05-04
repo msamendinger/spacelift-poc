@@ -1,6 +1,6 @@
 resource "spacelift_policy" "enforce_tags" {
   name = "Enforce tags based on tagging requirements"
-  body = file("./enforce_tags.rego")
+  body = file("./enforce_tags_on_resource_group.rego")
   type = "PLAN"
 }
 
