@@ -37,7 +37,7 @@ resource "azurerm_linux_virtual_machine" "spacelift" {
 
   admin_ssh_key {
     username   = "adminuser"
-    public_key = file("/mnt/workspace/id_ed25519.pub")
+    public_key = file("/mnt/workspace/azure.pub")
   }
 
   os_disk {
