@@ -31,27 +31,3 @@ resource "spacelift_stack" "dev" {
   runner_image = "msamendsandbox.azurecr.io/spacelift/runner-terrafrom:azure-latest"
 }
 
-resource "spacelift_environment_variable" "arm_client_id" {
-  stack_id = "azure-dev"
-  name     = "ARM_CLIENT_ID"
-  value    = ""
-}
-
-resource "spacelift_environment_variable" "arm_secret_id" {
-  stack_id = "azure-dev"
-  name     = "ARM_SECRET_ID"
-  value    = ""
-}
-
-resource "spacelift_environment_variable" "arm_subscription_id" {
-  stack_id = "azure-dev"
-  name     = "ARM_SUBSCRIPTION_ID"
-  value    = ""
-}
-
-resource "spacelift_environment_variable" "arm_tenant_id" {
-  stack_id = "azure-dev"
-  name     = "ARM_TENANT_ID"
-  value    = ""
-}
-
