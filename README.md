@@ -21,15 +21,17 @@ To enable `stack2` to read the output of `stack1` you have to enable
 name as workspace name in stack2/main.tf. The id doesn't change when you rename
 the stack.
 
+### modules
+
+Two modules to test the module registry. The configuration for the modules are
+in the `.spacelift` directory. Documentation can be found in the
+[module configuration docs](https://docs.spacelift.io/vendors/terraform/module-registry#module-configuration)
+
 ### ToDo
 
-- Modules in subfolders of repo
-  - versioning
 - Notification policy mattermost webhook
 - Policy are tags on resource group
 - Approval policy
 - local run with spacectl
+- Use GitHub App on GHES
 
-### Teardown external infrastructure
-
-- delete acr for runner-terraform:azure-latest
