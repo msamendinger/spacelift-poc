@@ -9,11 +9,13 @@ required_tags := {"mbmAppName", "mbmEnvironment"}
 
 deny[sprintf("resource %q does not have all suggested tags (%s)", [resource.address, concat(", ", missing_tags)])] {
 	resource := input.terraform.resource_changes[_]
-	tags := resource.change.after.tags_all
+	tags := resource.change.after.tags
 
 	missing_tags := {tag | required_tags[tag]; not tags[tag]}
 
 	count(missing_tags) > 0
+
+	resource.type == "azurerm_resource_group"
 }
 
 # Learn more about sampling policy evaluations here:
