@@ -25,12 +25,11 @@ resource "azurerm_network_interface" "spacelift" {
 }
 
 resource "azurerm_linux_virtual_machine" "spacelift" {
-  name                            = "spacelift-machine"
-  resource_group_name             = azurerm_resource_group.spacelift.name
-  location                        = azurerm_resource_group.spacelift.location
-  size                            = "Standard_F2"
-  admin_username                  = "adminuser"
-  disable_password_authentication = false
+  name                = "spacelift-machine"
+  resource_group_name = azurerm_resource_group.spacelift.name
+  location            = azurerm_resource_group.spacelift.location
+  size                = "Standard_F2"
+  admin_username      = "adminuser"
   network_interface_ids = [
     azurerm_network_interface.spacelift.id,
   ]
