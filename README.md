@@ -4,7 +4,9 @@
 
 spacelift configuration is managed as terraform files here.
 
-The stack that points to the foundation subfolder must be an administrative one.
+- The stack that points to the foundation subfolder must be an administrative one.
+- If you want to use `spacectl stack --local-preview --id <stack-id>` the stack
+must have `enable_local_preview` set to `true`.
 
 ### stack1 
 
@@ -32,7 +34,6 @@ in the `.spacelift` directory. Documentation can be found in the
 - Notification policy mattermost webhook
 - Policy are tags on resource group
 - Approval policy
-- local run with spacectl
 - Use GitHub App on GHES
 
 ### Questions, thoughts
