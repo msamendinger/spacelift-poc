@@ -35,3 +35,8 @@ in the `.spacelift` directory. Documentation can be found in the
 - local run with spacectl
 - Use GitHub App on GHES
 
+### Questions, thoughts
+
+- stack ID should be a random ID and more prominently featured to avoid confusion
+- way to roll everything back if deployment didn't work
+- spacelift_module doesn't detect when module with the same id is already present, only after apply
