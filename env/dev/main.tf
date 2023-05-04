@@ -13,7 +13,7 @@ provider "azurerm" {
 }
 
 module "mazure_tags" {
-  source                   = "spacelift.io/msamendinger/azure-gb4-tags/default"
+  source                   = "spacelift.io/msamendinger/tags/default"
   version                  = "0.0.1"
   mbmAppName               = "spacelift"
   mbmCloudSecResponsible   = "marc.samendinger@mercedes-benz.com"
