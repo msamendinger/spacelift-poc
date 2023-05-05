@@ -5,7 +5,7 @@
 spacelift configuration is managed as terraform files here.
 
 - The stack that points to the foundation subfolder must be an administrative one.
-- If you want to use `spacectl stack --local-preview --id <stack-id>` the stack
+- If you want to use `spacectl stack local-preview --id <stack-id>` the stack
 must have `enable_local_preview` set to `true`.
 
 ### stack1 
@@ -42,3 +42,4 @@ in the `.spacelift` directory. Documentation can be found in the
 - way to roll everything back if deployment didn't work
 - spacelift_module doesn't detect when module with the same id is already present, only after apply
 - it's snappy
+- How to work with all the checks in branch protection rules
