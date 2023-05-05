@@ -33,6 +33,9 @@ override.tf.json
 .terraformrc
 terraform.rc
 
+# We're testing don't lock
+.terraform.lock.hcl
+
 # Apple
 .DS_Store
 # Environments
