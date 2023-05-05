@@ -5,12 +5,17 @@ terraform {
       source  = "hashicorp/azurerm"
       version = ">= 3.9.0"
     }
+    spacelift = {
+      source = "spacelift-io/spacelift"
+    }
   }
 }
 
 provider "azurerm" {
   features {}
 }
+
+provider "spacelift" {}
 
 module "mazure_tags" {
   source                   = "spacelift.io/msamendinger/tags/default"
