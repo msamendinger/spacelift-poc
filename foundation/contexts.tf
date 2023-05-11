@@ -7,3 +7,9 @@ resource "spacelift_context_attachment" "azure-env" {
   context_id = spacelift_context.azure-env.id
   stack_id   = spacelift_stack.dev.id
 }
+
+resource "spacelift_context_attachment" "foundation" {
+  context_id = spacelift_context.azure-env.id
+  stack_id   = spacelift_stack.foundation.id
+}
+
