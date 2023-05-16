@@ -21,7 +21,7 @@ data "terraform_remote_state" "azure-dev" {
     organization = "msamendinger"
 
     workspaces = {
-      name = "azure-de"
+      name = "azure-dev"
     }
   }
 }
