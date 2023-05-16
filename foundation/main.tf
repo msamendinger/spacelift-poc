@@ -12,3 +12,16 @@ terraform {
   }
 }
 
+
+data "terraform_remote_state" "azure-dev" {
+  backend = "remote"
+
+  config = {
+    hostname     = "spacelift.io"
+    organization = "msamendinger"
+
+    workspaces = {
+      name = "azure-de"
+    }
+  }
+}
