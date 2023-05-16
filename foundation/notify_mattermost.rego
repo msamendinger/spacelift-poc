@@ -9,7 +9,7 @@ webhook[wbdata] {
   wbdata := {
     "endpoint_id": endpoint.id,
     "payload": {
-      "text": sprintf("Run ID: %s on stack %s finished with status %s", [run.id, stack.name, run.state])
+      "text": sprintf("Run ID: %s on stack %s finished with status %s\n\nTriggered by commit %s", [run.id, stack.name, run.state, run.commit.url])
     },
     "method": "POST",
     "headers": {
