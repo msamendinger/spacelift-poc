@@ -48,7 +48,7 @@ sudo apt-get -y install docker-ce docker-ce-cli containerd.io
 CURRENTARCH=$(uname -m)
 URL=https://storage.googleapis.com/gvisor/releases/release/latest/"$CURRENTARCH"
 
-wget "URL"/runsc "URL"/runsc.sha512 "URL"/containerd-shim-runsc-v1 "URL"/containerd-shim-runsc-v1.sha512
+wget "$URL"/runsc "$URL"/runsc.sha512 "$URL"/containerd-shim-runsc-v1 "$URL"/containerd-shim-runsc-v1.sha512
 sha512sum -c runsc.sha512 -c containerd-shim-runsc-v1.sha512
 rm -f *.sha512
 
@@ -72,7 +72,7 @@ sudo apt-get -y install azure-cli
 
   worker_script_tail = <<EOF
 export SPACELIFT_TOKEN=${spacelift_worker_pool.mbm.config}
-export SPACELIFT_POOL_PRIVATE_KEY=${tls_private_key.workers.private_key_pem}
+export SPACELIFT_POOL_PRIVATE_KEY=${base64encode(tls_private_key.workers.private_key_pem)}
 
 currentArch=$(uname -m)
 
