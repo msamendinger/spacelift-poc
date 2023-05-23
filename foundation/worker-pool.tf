@@ -14,6 +14,6 @@ resource "tls_cert_request" "workers" {
 
 resource "spacelift_worker_pool" "mbm" {
   name        = "Main worker"
-  csr         = tls_cert_request.workers.cert_request_pem
+  csr         = base64encode(tls_cert_request.workers.cert_request_pem)
   description = "Used for all type jobs"
 }
