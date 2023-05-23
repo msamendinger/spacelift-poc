@@ -25,6 +25,7 @@ resource "spacelift_stack" "stack2" {
 resource "spacelift_stack" "dev" {
   name                            = "azure-dev"
   repository                      = "spacelift-poc"
+  worker_pool_id                  = "01H152979XDP6X5J8ZN034V661"
   autodeploy                      = true
   terraform_external_state_access = true
   branch                          = "main"
