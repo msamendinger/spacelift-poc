@@ -214,7 +214,7 @@ resource "azurerm_linux_virtual_machine" "spacelift-worker" {
   source_image_reference {
     publisher = "Canonical"
     offer     = "0001-com-ubuntu-server-focal-daily"
-    sku       = "20_04-daily-lts-gen2"
+    sku       = "20_04-daily-lts"
     version   = "latest"
   }
 
