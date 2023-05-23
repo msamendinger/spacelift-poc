@@ -42,9 +42,3 @@ resource "azurerm_resource_group" "spacelift" {
   tags     = module.mazure_tags.tags
 }
 
-resource "azurerm_resource_group" "spacelift_sbx" {
-  name     = "spacelift_sbx"
-  location = "West Europe"
-  tags     = module.mazure_tags.tags
-}
-
