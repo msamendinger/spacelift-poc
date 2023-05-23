@@ -12,6 +12,13 @@ mandatory tags and a notification policy to send a mattermost message for failed
 runs.
 - The mattermost webhook is currently manually added to spacelift as the url
 must be considered a secret.
+- Private worker pool is configured in the file `worker-pool.tf` the worker
+itself in `vm.tf` and identity.tf
+- The `azure-dev` stack runs on the private worker
+- Modules are set up in `modules.tf`
+- A context is created and bound to the `foundation` and `azure-dev` stacks.
+The ssh public key for the vms and the azurerm env vars are currently
+manually added to the context.
 
 ### stack1 
 
@@ -28,6 +35,11 @@ To enable `stack2` to read the output of `stack1` you have to enable
 name as workspace name in stack2/main.tf. The id doesn't change when you rename
 the stack.
 
+### env/dev
+
+/env/dev is the `azure-dev` stack. Used to deploy to Azure.
+At the moment only one vm. Using federated credentials to access the Azure API.
+
 ### modules
 
 Two modules to test the module registry. The configuration for the modules are
@@ -42,10 +54,6 @@ in the `.spacelift` directory. Documentation can be found in the
 
 ### Questions, thoughts
 
-- Federated credentials possible?
 - stack ID should be a random ID and more prominently featured to avoid confusion
 - way to roll everything back if deployment didn't work
-- spacelift_module doesn't detect when module with the same id is already present, only after apply
-- it's snappy
 - How to work with all the checks in branch protection rules
-- Best way to work with secrets?

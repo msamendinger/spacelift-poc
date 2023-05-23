@@ -1,6 +1,6 @@
 variable "process_exit_behavior" {
   type        = string
-  description = "The behavior to use when the Spacelift process exits"
+  description = "The behavior to use when the Spacelift process on the worker exits"
   default     = "None"
   validation {
     condition     = can(regex("^(Reboot|Shutdown|None)$", var.process_exit_behavior))
