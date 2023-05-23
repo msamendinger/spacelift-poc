@@ -11,15 +11,6 @@ terraform {
   }
 }
 
-provider "azurerm" {
-  features {}
-  use_oidc             = true
-  oidc_token_file_path = "/mnt/workspace/spacelift.oidc"
-
-}
-
-provider "spacelift" {}
-
 # remote state example
 # stack needs administrative permissions to use remote state
 # and "workspaces" need remote state access enabled  

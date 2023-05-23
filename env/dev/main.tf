@@ -11,12 +11,6 @@ terraform {
   }
 }
 
-provider "azurerm" {
-  features {}
-}
-
-provider "spacelift" {}
-
 module "mazure_tags" {
   source                   = "spacelift.io/msamendinger/tags/default"
   version                  = "0.0.1"
