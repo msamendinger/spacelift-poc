@@ -36,3 +36,8 @@ resource "spacelift_stack" "dev" {
   before_plan                     = ["terraform fmt -check", "terraform validate"]
 }
 
+resource "spacelift_drift_detection" "dev" {
+  stack_id  = spacelift_stack.dev.id
+  schedule  = ["*/15 * * * *"] # Every 15 minutes
+  reconcile = true
+}
