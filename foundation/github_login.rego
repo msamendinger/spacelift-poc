@@ -1,6 +1,6 @@
 package spacelift
 
-admins := { "mpalijan", "dschniepp" }
+admins := { "mpalijan", "dschniepp", "camilofgtp1", "didi-at-work" }
 
 login := input.session.login
 
