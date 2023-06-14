@@ -3,6 +3,6 @@ output "hello_world" {
 }
 
 output "hello_dog" {
-  value = "hello dog!"
+  value = "hello cat!"
 }
 
