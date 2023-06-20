@@ -1,12 +1,10 @@
 package spacelift
 
-# admins := { "mpalijan", "dschniepp", "camilofgtp1", "didi-at-work", "Marc Samendinger" }
-#
-# login := input.session.login
-#
-# admin { admins[login] }
-# deny  { not admins[login] }
+admins := { "mpalijan", "dschniepp", "camilofgtp1", "didi-at-work", "Marc Samendinger" }
 
-admin { input.session.member }
+login := input.session.name
+
+admin { admins[login] }
+deny  { not admins[login] }
 
 sample = true
