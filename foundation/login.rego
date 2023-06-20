@@ -7,4 +7,4 @@ package spacelift
 # admin { admins[login] }
 # deny  { not admins[login] }
 
-admins { input.session.member }
+admin { input.session.member }
