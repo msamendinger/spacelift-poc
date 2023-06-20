@@ -8,3 +8,5 @@ package spacelift
 # deny  { not admins[login] }
 
 admin { input.session.member }
+
+sample = true
