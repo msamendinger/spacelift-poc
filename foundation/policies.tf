@@ -21,3 +21,10 @@ resource "spacelift_policy" "github_login" {
   body = file("./github_login.rego")
   type = "LOGIN"
 }
+
+resource "spacelift_policy" "login" {
+  name = "Let SSO Users login"
+  body = file("./login.rego")
+  type = "LOGIN"
+}
+
