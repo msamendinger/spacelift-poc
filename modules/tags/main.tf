@@ -14,7 +14,7 @@ locals {
     mbmAvailability          = lower(var.mbmAvailability)
     mbmContinuityCritical    = lower(var.mbmContinuityCritical)
     mbmPersonalData          = lower(var.mbmPersonalData)
-    mbmTagsVersion           = "v0.2.2"
+    mbmTagsVersion           = "v0.2.3"
     # We want to know what version of the azure-gb4-tags version was being used
     # to tag the resources. mbmTagsVersion makes this possible by looking at
     # the resource itself.
