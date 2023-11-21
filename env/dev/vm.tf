@@ -25,7 +25,7 @@ resource "azurerm_network_interface" "spacelift" {
 }
 
 resource "azurerm_linux_virtual_machine" "spacelift" {
-  name                = "spacelift-machine"
+  name                = "spacelift-worker"
   resource_group_name = azurerm_resource_group.spacelift.name
   location            = azurerm_resource_group.spacelift.location
   size                = "Standard_B1ls"
