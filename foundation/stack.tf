@@ -44,7 +44,7 @@ resource "spacelift_drift_detection" "dev" {
 
 resource "spacelift_stack" "datadog" {
   github_enterprise {
-    namespace = "mbm" # The GitHub organization the repository belongs to
+    namespace = "mbm-poc" # The GitHub organization the repository belongs to
   }
   name                            = "datadog"
   repository                      = "datadog"
