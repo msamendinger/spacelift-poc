@@ -13,3 +13,13 @@ resource "spacelift_context_attachment" "foundation" {
   stack_id   = data.spacelift_current_stack.this.id
 }
 
+resource "spacelift_context" "datadog" {
+  description = "Datadog environment"
+  name        = "datadog-env"
+}
+
+resource "spacelift_context_attachment" "datadog-env" {
+  context_id = spacelift_context.datadog-env.id
+  stack_id   = spacelift_stack.datadog.id
+}
+
