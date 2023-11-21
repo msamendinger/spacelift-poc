@@ -8,6 +8,7 @@ resource "spacelift_stack" "stack1" {
   # Source code.
   branch       = "main"
   project_root = "stack1"
+  enable_local_preview            = true
   labels       = ["managed", "depends-on:${data.spacelift_current_stack.this.id}", "feature:add_plan_pr_comment"]
 }
 
@@ -19,6 +20,7 @@ resource "spacelift_stack" "stack2" {
   repository   = "spacelift-poc"
   branch       = "main"
   project_root = "stack2"
+  enable_local_preview            = true
   labels       = ["managed", "depends-on:${data.spacelift_current_stack.this.id}", "feature:add_plan_pr_comment"]
 }
 
