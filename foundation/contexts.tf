@@ -19,7 +19,7 @@ resource "spacelift_context" "datadog" {
 }
 
 resource "spacelift_context_attachment" "datadog-env" {
-  context_id = spacelift_context.datadog-env.id
+  context_id = spacelift_context.datadog.id
   stack_id   = spacelift_stack.datadog.id
 }
 
